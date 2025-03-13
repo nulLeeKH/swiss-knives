@@ -18,7 +18,7 @@ export default function Navigation() {
         <div className="uk-navbar">
           <div className="uk-navbar-left">
             <Link className="uk-navbar-item uk-logo" href="/">
-              Digital Swiss Knife
+              Digital Swiss Knives
             </Link>
           </div>
           <div className="uk-navbar-right">
@@ -31,6 +31,9 @@ export default function Navigation() {
               </li>
               <li className={pathname === '/pdf' ? 'uk-active' : ''}>
                 <Link href="/pdf">PDF Generator</Link>
+              </li>
+              <li className={pathname === '/frame' ? 'uk-active' : ''}>
+                <Link href="/frame">Instagram Frame</Link>
               </li>
             </ul>
           </div>

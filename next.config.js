@@ -4,6 +4,9 @@ const nextConfig = {
     ignoreDuringBuilds: false,
     dirs: ['src'],
   },
+  images: {
+    domains: ['fonts.googleapis.com', 'fonts.gstatic.com'],
+  },
 };
 
 export default nextConfig;

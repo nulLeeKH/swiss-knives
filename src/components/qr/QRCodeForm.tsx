@@ -248,22 +248,22 @@ export default function QRCodeForm({
             <h3 className="uk-heading-divider">Contact Information</h3>
 
             {/* Name Section */}
-            <div className="uk-margin">
+          <div className="uk-margin">
               <h4 className="uk-heading-bullet">Name Components</h4>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-prefix">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-prefix">
                   Honorific Prefix
-                </label>
-                <input
+              </label>
+              <input
                   type="text"
-                  id="vcard-prefix"
-                  className="uk-input"
+                id="vcard-prefix"
+                className="uk-input"
                   placeholder="e.g., Dr., Mr., Ms."
                   value={structuredData.prefix || ''}
                   onChange={e => updateStructuredField('prefix', e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
               <div className="uk-margin-small">
                 <label className="uk-form-label" htmlFor="vcard-firstName">
@@ -305,29 +305,29 @@ export default function QRCodeForm({
                   value={structuredData.lastName || ''}
                   onChange={e => updateStructuredField('lastName', e.target.value)}
                 />
-              </div>
+            </div>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-suffix">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-suffix">
                   Honorific Suffix
-                </label>
-                <input
+              </label>
+              <input
                   type="text"
-                  id="vcard-suffix"
-                  className="uk-input"
+                id="vcard-suffix"
+                className="uk-input"
                   placeholder="e.g., Ph.D., Jr."
                   value={structuredData.suffix || ''}
                   onChange={e => updateStructuredField('suffix', e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
-              <div className="uk-margin-small">
+            <div className="uk-margin-small">
                 <label className="uk-form-label" htmlFor="vcard-fullName">
                   Formatted Name
-                </label>
-                <div className="uk-flex uk-flex-middle">
-                  <input
-                    type="text"
+              </label>
+              <div className="uk-flex uk-flex-middle">
+                <input
+                  type="text"
                     id="vcard-fullName"
                     className="uk-input"
                     placeholder="Full formatted name"
@@ -339,17 +339,17 @@ export default function QRCodeForm({
                     disabled={autoUpdateFullName}
                   />
                   <div className="uk-margin-small-left">
-                    <label>
-                      <input
-                        className="uk-checkbox"
-                        type="checkbox"
-                        checked={autoUpdateFullName}
+                  <label>
+                    <input
+                      className="uk-checkbox"
+                      type="checkbox"
+                      checked={autoUpdateFullName}
                         onChange={e => setAutoUpdateFullName(e.target.checked)}
                       />{' '}
                       Auto
-                    </label>
-                  </div>
+                  </label>
                 </div>
+              </div>
               </div>
             </div>
 
@@ -357,28 +357,28 @@ export default function QRCodeForm({
             <div className="uk-margin">
               <h4 className="uk-heading-bullet">Organization</h4>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-organization">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-organization">
                   Organization Name
-                </label>
-                <input
+              </label>
+              <input
                   type="text"
-                  id="vcard-organization"
-                  className="uk-input"
-                  placeholder="Organization name"
+                id="vcard-organization"
+                className="uk-input"
+                placeholder="Organization name"
                   value={structuredData.organization || ''}
                   onChange={e => updateStructuredField('organization', e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-title">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-title">
                   Title
-                </label>
-                <input
+              </label>
+              <input
                   type="text"
-                  id="vcard-title"
-                  className="uk-input"
+                id="vcard-title"
+                className="uk-input"
                   placeholder="Job title or role"
                   value={structuredData.title || ''}
                   onChange={e => updateStructuredField('title', e.target.value)}
@@ -390,14 +390,14 @@ export default function QRCodeForm({
             <div className="uk-margin">
               <h4 className="uk-heading-bullet">Phone Numbers</h4>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-phone">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-phone">
                   Primary Phone
-                </label>
-                <input
+              </label>
+              <input
                   type="tel"
-                  id="vcard-phone"
-                  className="uk-input"
+                id="vcard-phone"
+                className="uk-input"
                   placeholder="Primary phone number"
                   value={structuredData.phone || ''}
                   onChange={e => updateStructuredField('phone', e.target.value)}
@@ -409,14 +409,14 @@ export default function QRCodeForm({
                   Mobile Phone
                 </label>
                 <input
-                  type="tel"
+                type="tel"
                   id="vcard-mobilePhone"
                   className="uk-input"
                   placeholder="Mobile phone number"
                   value={structuredData.mobilePhone || ''}
                   onChange={e => updateStructuredField('mobilePhone', e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
               <div className="uk-margin-small">
                 <label className="uk-form-label" htmlFor="vcard-workPhone">
@@ -451,14 +451,14 @@ export default function QRCodeForm({
             <div className="uk-margin">
               <h4 className="uk-heading-bullet">Email Addresses</h4>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-email">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-email">
                   Primary Email
-                </label>
-                <input
+              </label>
+              <input
                   type="email"
-                  id="vcard-email"
-                  className="uk-input"
+                id="vcard-email"
+                className="uk-input"
                   placeholder="Primary email address"
                   value={structuredData.email || ''}
                   onChange={e => updateStructuredField('email', e.target.value)}
@@ -470,14 +470,14 @@ export default function QRCodeForm({
                   Work Email
                 </label>
                 <input
-                  type="email"
+                type="email"
                   id="vcard-workEmail"
                   className="uk-input"
                   placeholder="Work email address"
                   value={structuredData.workEmail || ''}
                   onChange={e => updateStructuredField('workEmail', e.target.value)}
-                />
-              </div>
+              />
+            </div>
 
               <div className="uk-margin-small">
                 <label className="uk-form-label" htmlFor="vcard-homeEmail">
@@ -498,14 +498,14 @@ export default function QRCodeForm({
             <div className="uk-margin">
               <h4 className="uk-heading-bullet">Website</h4>
 
-              <div className="uk-margin-small">
-                <label className="uk-form-label" htmlFor="vcard-website">
+            <div className="uk-margin-small">
+              <label className="uk-form-label" htmlFor="vcard-website">
                   Website URL
-                </label>
-                <input
+              </label>
+              <input
                   type="url"
-                  id="vcard-website"
-                  className="uk-input"
+                id="vcard-website"
+                className="uk-input"
                   placeholder="https://example.com"
                   value={structuredData.website || ''}
                   onChange={e => updateStructuredField('website', e.target.value)}
@@ -518,7 +518,7 @@ export default function QRCodeForm({
               <h4 className="uk-heading-bullet">Addresses</h4>
 
               {/* Primary Address */}
-              <div className="uk-margin-small">
+            <div className="uk-margin-small">
                 <h5>Primary Address</h5>
                 <div className="uk-margin-small">
                   <label className="uk-form-label" htmlFor="vcard-pobox">
@@ -547,66 +547,66 @@ export default function QRCodeForm({
                   />
                 </div>
                 <div className="uk-margin-small">
-                  <label className="uk-form-label" htmlFor="vcard-street">
+              <label className="uk-form-label" htmlFor="vcard-street">
                     Street
-                  </label>
-                  <input
+              </label>
+              <input
                     type="text"
-                    id="vcard-street"
-                    className="uk-input"
-                    placeholder="Street address"
+                id="vcard-street"
+                className="uk-input"
+                placeholder="Street address"
                     value={structuredData.street || ''}
                     onChange={e => updateStructuredField('street', e.target.value)}
-                  />
-                </div>
+              />
+            </div>
                 <div className="uk-margin-small">
-                  <label className="uk-form-label" htmlFor="vcard-city">
-                    City
-                  </label>
-                  <input
+                <label className="uk-form-label" htmlFor="vcard-city">
+                  City
+                </label>
+                <input
                     type="text"
-                    id="vcard-city"
-                    className="uk-input"
-                    placeholder="City"
+                  id="vcard-city"
+                  className="uk-input"
+                  placeholder="City"
                     value={structuredData.city || ''}
                     onChange={e => updateStructuredField('city', e.target.value)}
-                  />
-                </div>
+                />
+              </div>
                 <div className="uk-margin-small">
-                  <label className="uk-form-label" htmlFor="vcard-state">
-                    State/Province
-                  </label>
-                  <input
+                <label className="uk-form-label" htmlFor="vcard-state">
+                  State/Province
+                </label>
+                <input
                     type="text"
-                    id="vcard-state"
-                    className="uk-input"
+                  id="vcard-state"
+                  className="uk-input"
                     placeholder="State or province"
                     value={structuredData.state || ''}
                     onChange={e => updateStructuredField('state', e.target.value)}
-                  />
-                </div>
+                />
+              </div>
                 <div className="uk-margin-small">
-                  <label className="uk-form-label" htmlFor="vcard-zip">
+                <label className="uk-form-label" htmlFor="vcard-zip">
                     Postal Code
-                  </label>
-                  <input
+                </label>
+                <input
                     type="text"
-                    id="vcard-zip"
-                    className="uk-input"
+                  id="vcard-zip"
+                  className="uk-input"
                     placeholder="ZIP or postal code"
                     value={structuredData.zip || ''}
                     onChange={e => updateStructuredField('zip', e.target.value)}
-                  />
-                </div>
+                />
+              </div>
                 <div className="uk-margin-small">
-                  <label className="uk-form-label" htmlFor="vcard-country">
-                    Country
-                  </label>
-                  <input
+                <label className="uk-form-label" htmlFor="vcard-country">
+                  Country
+                </label>
+                <input
                     type="text"
-                    id="vcard-country"
-                    className="uk-input"
-                    placeholder="Country"
+                  id="vcard-country"
+                  className="uk-input"
+                  placeholder="Country"
                     value={structuredData.country || ''}
                     onChange={e => updateStructuredField('country', e.target.value)}
                   />
@@ -952,9 +952,9 @@ export default function QRCodeForm({
                   onChange={e => setErrorCorrection(e.target.value as QRErrorCorrectionLevel)}
                 >
                   {Object.entries(ERROR_CORRECTION_DESCRIPTIONS).map(([level, description]) => (
-                    <option key={level} value={level}>
-                      {description}
-                    </option>
+                      <option key={level} value={level}>
+                        {description}
+                      </option>
                   ))}
                 </select>
               </div>
@@ -993,21 +993,21 @@ export default function QRCodeForm({
                   {overlayImage && (
                     <div className="uk-width-1-1 uk-width-1-3@s uk-flex uk-flex-middle uk-flex-center">
                       {process.env.NODE_ENV === 'test' ? (
-                        <Image
-                          src={overlayImage}
-                          alt="Logo preview"
+                        <Image 
+                          src={overlayImage} 
+                          alt="Logo preview" 
                           width={60}
                           height={60}
-                          style={{ maxHeight: '60px', maxWidth: '100%', objectFit: 'contain' }}
+                          style={{ maxHeight: '60px', maxWidth: '100%', objectFit: 'contain' }} 
                           className="uk-margin-small-right"
                         />
                       ) : (
-                        <Image
-                          src={overlayImage}
-                          alt="Logo preview"
+                        <Image 
+                          src={overlayImage} 
+                          alt="Logo preview" 
                           width={60}
                           height={60}
-                          style={{ maxHeight: '60px', maxWidth: '100%', objectFit: 'contain' }}
+                          style={{ maxHeight: '60px', maxWidth: '100%', objectFit: 'contain' }} 
                           className="uk-margin-small-right"
                         />
                       )}
@@ -1048,4 +1048,4 @@ export default function QRCodeForm({
       </div>
     </div>
   );
-}
+} 

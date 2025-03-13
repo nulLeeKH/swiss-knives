@@ -26,6 +26,12 @@ const tools = [
     link: '/pdf',
     newTab: false,
   },
+  {
+    title: 'Instagram Frame',
+    description: 'Create beautiful Instagram frames with custom text and logos',
+    link: '/frame',
+    newTab: false,
+  },
 ];
 
 export default function Home() {
@@ -64,7 +70,7 @@ export default function Home() {
       <div className="uk-container">
         {/* Header Section */}
         <div className="uk-text-center uk-margin-large-bottom">
-          <h1 className="uk-heading-medium">Digital Swiss Knife</h1>
+          <h1 className="uk-heading-medium">Digital Swiss Knives</h1>
           <p className="uk-text-lead">My All-in-One Digital Toolkit</p>
         </div>
 
