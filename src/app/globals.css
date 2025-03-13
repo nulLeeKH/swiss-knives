@@ -1,0 +1,112 @@
+@import 'uikit/dist/css/uikit.min.css';
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.uk-navbar-container {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uk-navbar-item.uk-logo {
+  font-weight: bold;
+  color: #333;
+}
+
+.uk-card {
+  transition: all 0.3s ease;
+}
+
+.uk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.uk-button {
+  transition: all 0.3s ease;
+}
+
+.uk-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Print and PDF styles to prevent content from being cut off between pages */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Prevent page breaks inside these elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  img,
+  table,
+  figure,
+  ul,
+  ol {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Control orphans and widows */
+  p {
+    orphans: 3 !important; /* Min number of lines at bottom of page */
+    widows: 3 !important; /* Min number of lines at top of page */
+  }
+
+  /* Avoid page breaks after headings */
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Keep sections together */
+  section,
+  .section,
+  .uk-section,
+  .uk-card {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Make sure code blocks wrap properly */
+  pre,
+  code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Ensure containers take full width in print */
+  .uk-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Remove hover effects in print */
+  .uk-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure images don't exceed page width */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
