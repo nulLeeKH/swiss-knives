@@ -32,11 +32,16 @@ nc -z localhost $PORT >/dev/null 2>&1
 if [ $? -eq 0 ]; then
   echo "Port ${PORT} is still in use. Attempting more aggressive cleanup..."
   
-  # Step 5: As a last resort, kill ALL node processes in Linux
-  echo "Terminating all node processes in Linux..."
-  pkill -f "node" 2>/dev/null
-  echo "All node processes terminated."
-  
+  # Step 5: Kill process using port 3000
+  echo "Terminating process using port 3000..."
+  PORT_PID=$(lsof -ti:3000)
+  if [ ! -z "$PORT_PID" ]; then
+    kill -9 $PORT_PID 2>/dev/null
+    echo "Process on port 3000 terminated."
+  else
+    echo "No process found on port 3000."
+  fi
+
   echo "Waiting for 3 more seconds..."
   sleep 3
 else
@@ -44,4 +49,4 @@ else
 fi
 
 echo "=== Starting the application ==="
-cd /home/zero/workspace/swiss-knife && npm run dev 
+cd /home/zero/workspace/swiss-knives && npm run dev 
