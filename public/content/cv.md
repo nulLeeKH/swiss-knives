@@ -1,4 +1,4 @@
-# Blair Kyung-ha Lee (이경하)
+# Blair Lee (이경하)
 
 **Backend Developer**
 
